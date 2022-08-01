@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Encabezado en Flex*/
+header{
+    background:none;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    align-content:center ;
+}  
+header nav .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-justify:unset;
+    color: rgb(161, 33, 33);
+}
+header nav .menu .brand img{
+    width: 30px;
+}
+header nav .menu .pinterest{
+    width: 30px;
+    align-items: flex-start;
+    text-emphasis-color: red   ;
+
+}
+
+header nav .menu .links{
+    display: flex;
+    justify-content: right;
+}
+header nav .menu .links a{
+    padding: 16px 12px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-bottom: 10px solid transparent;
+    transition: border .5s ease;
+}
+header nav .menu .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 20px;
+}
+
+.buscar{
+    size: 25px;
+    background: rgb(255, 255, 255);
+    border: black;
+    font-size: 20pt;
+    float: left;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+}
+
+.login{
+    background-color: rgb(175, 170, 170);
+    border: none;
+    color: black;
+    padding: 15px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 35%;
+}
+.loginup{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.login:hover{
+    filter:opacity(.75);
+}
+.loginup:hover{
+    background-color: rgb(124, 14, 14);
+}
+.links{
+     color: black;
+     text-emphasis-color: black;
+}
+.links a:hover{
+    background-color: rgb(161, 161, 161);
+}
+
+header nav .auto .login{
+    padding: 21px 20px;
+    border: 1px rgb(0, 0, 0);
+    background: gray;
+    color: #fff;
+    border-radius: 25%;
+}
+
+#abajo {
+    max-height: 2rem;
+} 
+
+/*Flex*/
+
+main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: #dadada;
+}
+.item {
+    width: 220px;
+    height: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    background: none;
+}
+.item:nth-child(3n+2) {
+    height: 400px;
+    -moz-column-break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	margin: 0 2px 15px;
+	padding: 15px;
+	border: 2px solid #FAFAFA;
+	box-shadow: none;
+	background: #FEFEFE;
+	background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+}
+
+img{
+    border-radius: 10%;
+    object-fit: contain;
+}
+img:hover{
+    background-color: gray transparent;
+    filter:opacity(.5);
+}
+
+
+/* Trabajo en grid
+main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    background: #dadada;
+    padding: 0px 30px;
+
+}
+*/
+@media only scree and (max-width: 900px) { 
+    .container {
+        column-count:3;
+    }
+
+}
+
+@media only scree and (max-width: 800px) { 
+    .container {
+        column-count:2;
+    }
+
+}  
+@media only scree and (max-width: 400px) { 
+    .container {
+        column-count:1;
+    }
+
+}
